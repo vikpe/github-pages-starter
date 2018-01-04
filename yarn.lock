@@ -2,12 +2,6 @@
 # yarn lockfile v1
 
 
-"@devheart/sass@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@devheart/sass/-/sass-0.2.1.tgz#0cf506e708883305f824a5fe21b8e1b63917e944"
-  dependencies:
-    bootstrap "4.0.0-beta.2"
-
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -1096,6 +1090,12 @@ detect-libc@^1.0.2:
 dev-ip@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/dev-ip/-/dev-ip-1.0.1.tgz#a76a3ed1855be7a012bb8ac16cb80f3c00dc28f0"
+
+devheart-sass@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/devheart-sass/-/devheart-sass-0.3.0.tgz#4117f183d91f5ce09ce084ed21c08d73424dd589"
+  dependencies:
+    bootstrap "4.0.0-beta.2"
 
 dom-compare-temp@^0.1.0:
   version "0.1.0"
