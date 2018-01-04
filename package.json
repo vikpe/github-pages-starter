@@ -1,0 +1,32 @@
+{
+  "name": "github-pages-starter",
+  "version": "0.1.0",
+  "description": "Rapid development for GitHub pages.",
+  "author": "Viktor Persson",
+  "license": "MIT",
+  "repository": "vikpe/github-pages-starter",
+  "scripts": {
+    "build": "gulp build && npm run jekyll-build",
+    "browser-sync": "browser-sync start --config bs-config.js",
+    "jekyll-build": "bundle exec jekyll build --config=_config.yml",
+    "jekyll-dev": "bundle exec jekyll build --watch --config=_config.yml,_config.localhost.yml"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.2",
+    "bootstrap": "4.0.0-beta.2",
+    "browser-sync": "^2.18.13",
+    "bs-html-injector": "^3.0.3",
+    "gulp": "^3.9.1",
+    "gulp-changed": "^3.1.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-util": "^3.0.8",
+    "node-sass": "^4.7.2",
+    "postcss-flexbugs-fixes": "^3.2.0"
+  },
+  "dependencies": {},
+  "postcss": {}
+}
