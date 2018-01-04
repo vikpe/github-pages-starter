@@ -33,7 +33,6 @@ gulp.task('build:styles', function() {
     .pipe(concat('styles.min.css'))
     .pipe(gulp.dest(paths.dist.stylesDir))
     .pipe(gulp.dest(paths.dist.includesDir))
-    .pipe(sass().on('error', sass.logError))
     .on('error', gutil.log);
 });
 
