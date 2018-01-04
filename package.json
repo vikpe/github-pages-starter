@@ -25,6 +25,7 @@
     "gulp-sass": "^3.1.0",
     "gulp-util": "^3.0.8",
     "node-sass": "^4.7.2",
+    "node-sass-tilde-importer": "^1.0.0",
     "postcss-flexbugs-fixes": "^3.2.0"
   },
   "dependencies": {},

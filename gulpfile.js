@@ -12,6 +12,7 @@ const gutil = require('gulp-util');
 const imagemin = require('gulp-imagemin');
 const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
+const tildeImporter = require('node-sass-tilde-importer');
 
 let gulpSrcOptions = { read: false };
 let gulpCleanOptions = { force: true };
@@ -24,11 +25,15 @@ gulp.task('build:styles', function() {
 
   return gulp
     .src(paths.src.stylesDir + '*.scss')
-    .pipe(sass({ outputStyle: 'compressed' }))
+    .pipe(sass({
+      importer: tildeImporter,
+      outputStyle: 'compressed'
+    }))
     .pipe(postcss(cssPostProcessors))
     .pipe(concat('styles.min.css'))
     .pipe(gulp.dest(paths.dist.stylesDir))
     .pipe(gulp.dest(paths.dist.includesDir))
+    .pipe(sass().on('error', sass.logError))
     .on('error', gutil.log);
 });
 
