@@ -1,0 +1,8 @@
+url: http://localhost:3000
+
+incremental: false
+
+custom_settings:
+  is_development: true
+  is_published: false
+  google_analytics_tracking_code: false
