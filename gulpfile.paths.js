@@ -7,15 +7,13 @@ const fileGlobs = {
   sass: '**/*.scss'
 };
 
-const frameworkSrc = '../src/';
-
 const src = {};
 src.baseDir = 'src/';
 src.imagesDir = src.baseDir + 'img/';
 src.stylesDir = src.baseDir + 'styles/';
 src.sassFilesGlob = [
   src.stylesDir + fileGlobs.sass,
-  frameworkSrc + fileGlobs.sass
+  '../node_modules/devheart-sass/' + fileGlobs.sass
 ];
 src.imageFilesGlob = src.imagesDir + fileGlobs.images;
 
