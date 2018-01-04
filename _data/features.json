@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Mobile-Friendly",
+    "description": "Responsive out of the box."
+  },
+  {
+    "title": "Live reload",
+    "description": "Changes to HTML and CSS (SASS) are instantly reflected in the browser."
+  },
+  {
+    "title": "Asset minification",
+    "description": "CSS and images are losslessly minified."
+  },
+  {
+    "title": "SASS",
+    "description": "SASS is compiled using Gulp for fast render time."
+  },
+  {
+    "title": "Google Analytics",
+    "description": "Just set your tracking code in the config."
+  }
+]
