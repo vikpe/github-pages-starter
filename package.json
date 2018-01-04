@@ -4,7 +4,7 @@
   "description": "Rapid development for GitHub pages.",
   "author": "Viktor Persson",
   "license": "MIT",
-  "repository": "vikpe/github-pages-starter",
+  "repository": "devheart/github-pages-starter",
   "scripts": {
     "build": "gulp build && npm run jekyll-build",
     "browser-sync": "browser-sync start --config bs-config.js",

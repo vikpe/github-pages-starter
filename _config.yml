@@ -1,9 +1,9 @@
 # General
-url: https://vikpe.org/github-pages-starter
+url: https://devheart.org/github-pages-starter
 encoding: utf-8
 
 # Github
-repository: vikpe/github-pages-starter
+repository: devheart/github-pages-starter
 
 # Handling Reading
 safe: true
@@ -42,7 +42,7 @@ kramdown:
 custom_settings:
   name: GitHub Pages starter
   description: Rapid development for GitHub pages.
-  repo_url: https://github.com/vikpe/github-pages-starter
+  repo_url: https://github.com/devheart/github-pages-starter
   is_development: false
   is_published: false
   google_analytics_tracking_code: false
