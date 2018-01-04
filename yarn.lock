@@ -2,6 +2,12 @@
 # yarn lockfile v1
 
 
+"@devheart/sass@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@devheart/sass/-/sass-0.2.0.tgz#c804b7c5c9d04aef904d6459c86809dc6f9fb955"
+  dependencies:
+    bootstrap "4.0.0-beta.2"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
