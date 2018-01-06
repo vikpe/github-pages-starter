@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-custom_menu_order: 2
+custom_menu_order: 1
 custom_description: About this starter
 ---
 
