@@ -23,19 +23,19 @@
     </head>
     <body id="top">
 
-        {% if site.custom_settings.is_development %}
-            <div id="dh-breakpoint-helper"></div>
-        {% endif %}
+        <div class="app-center-wrapper">
 
-        {% include header.md %}
+            {% include header.md %}
 
-        <main class="py-2" id="dh-site-main">
-            <article class="container">
-                {{ content }}
-            </article>
-        </main>
+            <main id="app-site-main">
+                <article>
+                    {{ content }}
+                </article>
+            </main>
 
-        {% include footer.md %}
+            {% include footer.md %}
+
+        </div>
 
         {% include google_analytics.md %}
 

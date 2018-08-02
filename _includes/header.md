@@ -1,4 +1,4 @@
-<header id="dh-site-header">
+<header id="app-site-header">
     <div class="container">
         <nav class="dh-collapse dh-topnav">
 

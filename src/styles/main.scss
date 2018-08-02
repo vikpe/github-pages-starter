@@ -1,1 +1,14 @@
-@import "~devheart-sass/src/themes/default/default";
+body {
+  background-color: #eee;
+}
+
+.app-center-wrapper {
+  width: 800px;
+  margin: 0 auto;
+}
+
+
+#app-site-header,
+#app-site-footer {
+  padding: 1em 0;
+}
