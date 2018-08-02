@@ -1,5 +1,5 @@
 # GitHub Pages starter
-> Rapid development for GitHub pages
+> Bare minimum GitHub Pages starter for rapid development
 
 * **Live reload** - Changes to HTML and CSS (SASS) are instantly reflected in the browser.
 * **Fast renders** - High performance Gulp tasks compile SASS and minify assets. Jekyll generates HTML.
