@@ -1,7 +1,7 @@
 {
   "name": "github-pages-starter",
   "version": "0.1.0",
-  "description": "Rapid development for GitHub pages.",
+  "description": "Bare minimum GitHub Pages starter for rapid development.",
   "author": "Viktor Persson",
   "license": "MIT",
   "repository": "devheart/github-pages-starter",
