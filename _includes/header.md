@@ -2,7 +2,7 @@
     <nav>
 
         <a href="{{ '/' | prepend: site.url}}">
-            <img src="{{'/assets/img/github.svg' | prepend: site.url}}" alt="" width="24" height="24" />
+            <img src="{{'/assets/img/jekyll.svg' | prepend: site.url}}" alt="" width="24" height="24" />
             {{site.custom_settings.name}}
         </a>
 
