@@ -4,7 +4,7 @@
   "description": "Bare minimum GitHub Pages starter for rapid development.",
   "author": "Viktor Persson",
   "license": "MIT",
-  "repository": "devheart/github-pages-starter",
+  "repository": "vikpe/github-pages-starter",
   "scripts": {
     "build": "gulp build && npm run jekyll-build",
     "browser-sync": "browser-sync start --config bs-config.js",
