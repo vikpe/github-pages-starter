@@ -7,15 +7,15 @@
 
 ## Installation
 1. Clone/download repo
-2. `yarn` / `npm install`
+2. `yarn install`
 3. Edit `_config.yml`, set your values.
 
 ## Development
 Open 3 terminals and run the following commands simultaneously.
 
 * `gulp` - Starts gulp default tasks (compile SASS, minify images) to `/assets`.
-* `npm run jekyll-dev` - Generate site on file changes (output to `/_site`) and copies `/assets` to `/_site/assets`.
-* `npm run browser-sync` - Start Browsersync, hosting contents in `/_site` @ `http://localhost:3000`.
+* `yarn run jekyll-dev` - Generate site on file changes (output to `/_site`) and copies `/assets` to `/_site/assets`.
+* `yarn run browser-sync` - Start Browsersync, hosting contents in `/_site` @ `http://localhost:3000`.
 
 ## Production
 1. `gulp build` - Clean up `/assets` (removes obsolete files).
