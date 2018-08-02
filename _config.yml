@@ -44,5 +44,4 @@ custom_settings:
   is_published: false
   name: GitHub Pages starter
   description: Rapid development for GitHub pages.
-  repo_url: https://github.com/devheart/github-pages-starter
   google_analytics_tracking_code: false
