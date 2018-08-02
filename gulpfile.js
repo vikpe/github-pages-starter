@@ -8,7 +8,7 @@ const changed = require('gulp-changed');
 const clean = require('gulp-clean');
 const concat = require('gulp-concat');
 const flexbugsFixes = require('postcss-flexbugs-fixes');
-const gutil = require('gulp-util');
+const fancyLog = require('fancy-log');
 const imagemin = require('gulp-imagemin');
 const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
@@ -33,7 +33,7 @@ gulp.task('build:styles', function() {
     .pipe(concat('styles.min.css'))
     .pipe(gulp.dest(paths.dist.stylesDir))
     .pipe(gulp.dest(paths.dist.includesDir))
-    .on('error', gutil.log);
+    .on('error', fancyLog.error);
 });
 
 // images
