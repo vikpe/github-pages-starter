@@ -23,6 +23,7 @@ exclude:
   - gulpfile.paths.js
   - readme.md
   - yarn.lock
+  - yarn-error.log
 
 # Conversion
 markdown: kramdown
