@@ -40,9 +40,9 @@ kramdown:
 
 # Custom settings
 custom_settings:
+  is_development: false
+  is_published: false
   name: GitHub Pages starter
   description: Rapid development for GitHub pages.
   repo_url: https://github.com/devheart/github-pages-starter
-  is_development: false
-  is_published: false
   google_analytics_tracking_code: false
