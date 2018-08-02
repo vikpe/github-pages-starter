@@ -32,7 +32,6 @@ gulp.task('build:styles', function() {
     .pipe(postcss(cssPostProcessors))
     .pipe(concat('styles.min.css'))
     .pipe(gulp.dest(paths.dist.stylesDir))
-    .pipe(gulp.dest(paths.dist.includesDir))
     .on('error', fancyLog.error);
 });
 
