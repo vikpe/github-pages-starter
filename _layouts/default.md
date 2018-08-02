@@ -14,11 +14,7 @@
         <link rel="shortcut icon" type="image/x-icon" href="{{site.url}}/favicon.ico">
         <title>{% if page.url == '/' %} {{site.custom_settings.name}} - {{site.custom_settings.description}}{% else %}{{page.title}} - {{site.custom_settings.name}}{% endif %}</title>
 
-        {% if site.custom_settings.is_development %}
         <link rel="stylesheet" type="text/css" href="{{'/assets/css/styles.min.css' | prepend: site.url}}">
-        {% else %}
-        <style type="text/css">{% include styles.min.css %}</style>
-        {% endif %}
 
     </head>
     <body id="top">
