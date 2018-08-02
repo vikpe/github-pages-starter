@@ -6,4 +6,4 @@ custom_menu_order: 1
 custom_description: About this starter
 ---
 
-Sample about page.
+This is a sample about page!
