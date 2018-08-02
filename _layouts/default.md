@@ -12,6 +12,7 @@
         {% endif %}
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
         <link rel="shortcut icon" type="image/x-icon" href="{{site.url}}/favicon.ico">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
         <title>{% if page.url == '/' %} {{site.custom_settings.name}} - {{site.custom_settings.description}}{% else %}{{page.title}} - {{site.custom_settings.name}}{% endif %}</title>
 
         <link rel="stylesheet" type="text/css" href="{{'/assets/css/styles.min.css' | prepend: site.url}}">
