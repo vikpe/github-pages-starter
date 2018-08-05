@@ -6,9 +6,7 @@
   "license": "MIT",
   "repository": "vikpe/github-pages-starter",
   "scripts": {
-    "build": "gulp build && npm run jekyll-build",
     "browser-sync": "browser-sync start --config bs-config.js",
-    "jekyll-build": "bundle exec jekyll build --config=_config.yml",
     "jekyll-dev": "bundle exec jekyll build --watch --config=_config.yml,_config.localhost.yml"
   },
   "devDependencies": {
