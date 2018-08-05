@@ -60,7 +60,7 @@ gulp.task('build:styles:prod', function() {
 // images
 gulp.task('clean:images:prod', function() {
   return gulp
-    .src(paths.dist.cssFilesGlob, gulpSrcOptions)
+    .src(paths.dist.imageFilesGlob, gulpSrcOptions)
     .pipe(clean(gulpCleanOptions));
 });
 
