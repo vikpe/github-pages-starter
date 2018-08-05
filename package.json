@@ -22,6 +22,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^4.1.0",
     "gulp-postcss": "^7.0.1",
+    "gulp-rev": "^8.1.1",
     "gulp-sass": "^4.0.1",
     "node-sass": "^4.9.2",
     "node-sass-tilde-importer": "^1.0.2",
