@@ -27,6 +27,7 @@ gulp.task('clean:styles:prod', function() {
 gulp.task('build:styles:dev', function() {
   return gulp
     .src(paths.src.stylesDir + '*.scss')
+    .pipe(sass().on('error', fancyLog.error))
     .pipe(sass({
       importer: tildeImporter,
       outputStyle: 'compressed'
@@ -44,6 +45,7 @@ gulp.task('build:styles:prod', function() {
 
   return gulp
     .src(paths.src.stylesDir + '*.scss')
+    .pipe(sass().on('error', fancyLog.error))
     .pipe(sass({
       importer: tildeImporter,
       outputStyle: 'compressed'
