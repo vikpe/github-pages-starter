@@ -69,8 +69,8 @@ gulp.task('build:images', function() {
 
   return gulp
     .src(paths.src.imageFilesGlob)
-    .pipe(changed(dest_dir, { hasChanged: changed.compareContents }))
     .pipe(imagemin())
+    .pipe(changed(dest_dir, { hasChanged: changed.compareContents }))
     .pipe(gulp.dest(dest_dir));
 });
 
