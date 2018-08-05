@@ -42,6 +42,7 @@ kramdown:
 
 # Custom settings
 custom_settings:
+  is_development: false
   is_published: false
   name: GitHub Pages starter
   description: Rapid bare minimum GitHub Pages starter.
