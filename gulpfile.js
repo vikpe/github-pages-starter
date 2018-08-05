@@ -58,38 +58,30 @@ gulp.task('build:styles:prod', function() {
 });
 
 // images
-gulp.task('clean:images:prod', function() {
+gulp.task('clean:images', function() {
   return gulp
     .src(paths.dist.imageFilesGlob, gulpSrcOptions)
     .pipe(clean(gulpCleanOptions));
 });
 
-gulp.task('build:images:dev', function() {
-  const dest_dir = paths.site.imagesDir;
-
-  return gulp
-    .src(paths.src.imageFilesGlob)
-    .pipe(changed(dest_dir, { hasChanged: changed.compareContents }))
-    .pipe(gulp.dest(dest_dir));
-});
-
-gulp.task('build:images:prod', function() {
+gulp.task('build:images', function() {
   const dest_dir = paths.dist.imagesDir;
 
   return gulp
     .src(paths.src.imageFilesGlob)
+    .pipe(changed(dest_dir, { hasChanged: changed.compareContents }))
     .pipe(imagemin())
     .pipe(gulp.dest(dest_dir));
 });
 
-gulp.task('watch', ['build:images:dev', 'build:styles:dev'], function() {
-  gulp.watch(paths.src.imageFilesGlob, ['build:images:dev']);
+gulp.task('watch', ['clean:images', 'build:images', 'build:styles:dev'], function() {
+  gulp.watch(paths.src.imageFilesGlob, ['build:images']);
   gulp.watch(paths.src.sassFilesGlob, ['build:styles:dev']);
 });
 
 // composite and default task
 gulp.task('build', [
-  'clean:images:prod', 'build:images:prod',
+  'clean:images', 'build:images',
   'clean:styles:prod', 'build:styles:prod'
 ]);
 gulp.task('default', ['watch']);
