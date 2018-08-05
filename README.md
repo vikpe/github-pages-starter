@@ -18,5 +18,5 @@ Open 3 terminals and run the following commands (they need to be run in parallel
 3. `yarn run browser-sync` - Starts Browsersync, hosting content from `/_site` at `http://localhost:3000`.
 
 ## Production
-1. `gulp build` - Clean up `/assets` (removes obsolete files).
+1. `gulp build`
 2. Push changes to `master`.
