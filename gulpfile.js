@@ -11,6 +11,7 @@ const flexbugsFixes = require('postcss-flexbugs-fixes');
 const fancyLog = require('fancy-log');
 const imagemin = require('gulp-imagemin');
 const postcss = require('gulp-postcss');
+const rev = require('gulp-rev');
 const sass = require('gulp-sass');
 const tildeImporter = require('node-sass-tilde-importer');
 
@@ -31,7 +32,10 @@ gulp.task('build:styles', function() {
     }))
     .pipe(postcss(cssPostProcessors))
     .pipe(concat('styles.min.css'))
+    .pipe(rev())
     .pipe(gulp.dest(paths.dist.stylesDir))
+    .pipe(rev.manifest())
+    .pipe(gulp.dest(paths.dist.dataDir))
     .on('error', fancyLog.error);
 });
 

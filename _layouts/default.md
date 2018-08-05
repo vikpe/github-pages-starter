@@ -15,7 +15,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
         <title>{% if page.url == '/' %} {{site.custom_settings.name}} - {{site.custom_settings.description}}{% else %}{{page.title}} - {{site.custom_settings.name}}{% endif %}</title>
 
-        <link rel="stylesheet" type="text/css" href="{{'/assets/css/styles.min.css' | prepend: site.url}}">
+        <link rel="stylesheet" type="text/css" href="{{site.url | append: '/assets/css/' | append: site.data.rev-manifest['styles.min.css']}}">
 
     </head>
     <body id="top">

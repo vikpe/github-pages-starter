@@ -22,6 +22,7 @@ dist.baseDir = '';
 dist.stylesDir = dist.baseDir + 'assets/css/';
 dist.imagesDir = dist.baseDir + 'assets/img/';
 dist.includesDir = dist.baseDir + '_includes/';
+dist.dataDir = dist.baseDir + '_data/';
 dist.imageFilesGlob = dist.imagesDir + fileGlobs.images;
 
 // All
