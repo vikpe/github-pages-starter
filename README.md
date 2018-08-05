@@ -7,7 +7,7 @@
 ## Installation
 1. Clone/download repo
 2. `yarn install`
-3. Edit `_config.yml`, change values for `url`, `repository`, `custom_settings`.
+3. Edit `_config.yml`, change values for `url` and `custom_settings`.
 
 ## Development
 Open 3 terminals and run the following commands (they need to be run in parallel).
