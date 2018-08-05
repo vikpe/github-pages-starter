@@ -1,7 +1,7 @@
 {
   "name": "github-pages-starter",
   "version": "0.1.0",
-  "description": "Fast rendering + live reload",
+  "description": "Fast rendering, live reload, GitHub Pages ready",
   "author": "Viktor Persson",
   "license": "MIT",
   "repository": "vikpe/github-pages-starter",

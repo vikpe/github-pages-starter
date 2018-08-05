@@ -1,5 +1,5 @@
 # GitHub Pages starter
-> Fast rendering + live reload
+> Fast rendering, live reload, GitHub Pages ready
 
 * Jekyll is great - but slow at compiling assets (images, SASS).
 * This setup uses high performance gulp tasks to generate assets.
