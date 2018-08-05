@@ -32,6 +32,8 @@ exclude:
   - Gemfile.lock
   - gulpfile.js
   - gulpfile.paths.js
+  - LICENSE
+  - package.json
   - readme.md
   - yarn.lock
   - yarn-error.log
