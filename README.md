@@ -1,7 +1,6 @@
 # GitHub Pages starter
 > Fast builds, live reload, GitHub Pages ready
 
-## Features
 * **GitHub Pages ready** (safe mode enabled)
 * **Fast site generation** - Using Jekyll to only generate HTML speeds up generation time
 * **Fast SCSS compilations** - High performance gulp task compiles SCSS to CSS
