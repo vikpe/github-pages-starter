@@ -17,9 +17,10 @@ include:
 
 keep_files:
   - assets/css/styles.min.css
+  - _data/rev-manifest.json
 
 exclude:
-  - assets/css/styles.min.css
+  - _data/rev-manifest.json
   - .idea/
   - node_modules/
   - project/
