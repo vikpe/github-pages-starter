@@ -8,7 +8,7 @@ custom_settings:
 
   # optional/convenience
   name: GitHub Pages starter
-  description: Fast rendering, live reload, GitHub Pages ready.
+  description: Fast builds, live reload, GitHub Pages ready.
 
 # Handling Reading
 safe: true
