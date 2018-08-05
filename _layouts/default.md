@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{site.custom_settings.language_code}}" dir="ltr">
+<html lang="en" dir="ltr">
     <head>
         {% if page.url == '/404.html' %}
         <meta name="robots" content="noindex, nofollow">
