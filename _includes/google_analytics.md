@@ -1,4 +1,4 @@
-{% if site.custom_settings.is_published == true and site.custom_settings.google_analytics_tracking_code != false %}
+{% if site.custom_settings.is_development == false and site.custom_settings.is_published == true and site.custom_settings.google_analytics_tracking_code != false %}
 
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
