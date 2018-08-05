@@ -1,8 +1,16 @@
-# General
+# Site Variables
 url: https://vikpe.org/github-pages-starter
 
-# Github
-repository: vikpe/github-pages-starter
+# Custom settings (GitHub Pages starter)
+custom_settings:
+  # required
+  is_development: false
+  is_published: false
+
+  # optional/convenience
+  name: GitHub Pages starter
+  description: Fast rendering, live reload, GitHub Pages ready.
+  google_analytics_tracking_code: false
 
 # Handling Reading
 safe: true
@@ -31,10 +39,8 @@ exclude:
 
 # Conversion
 markdown: kramdown
-incremental: false
-highlighter: rouge
 
-# Outputting
+# Output
 permalink: pretty
 timezone: Europe/Stockholm
 
@@ -42,11 +48,3 @@ timezone: Europe/Stockholm
 kramdown:
   input: GFM
   hard_wrap: false
-
-# Custom settings
-custom_settings:
-  is_development: false
-  is_published: false
-  name: GitHub Pages starter
-  description: Fast rendering, live reload, GitHub Pages ready.
-  google_analytics_tracking_code: false

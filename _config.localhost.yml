@@ -1,8 +1,9 @@
+# Site Variables
 url: http://localhost:3000
 
-incremental: false
-
+# Custom settings (GitHub Pages starter)
 custom_settings:
+  # required settings
   is_development: true
   is_published: false
-  google_analytics_tracking_code: false
+
