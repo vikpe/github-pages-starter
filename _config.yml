@@ -10,7 +10,11 @@ safe: true
 include:
   - _pages
 
+keep_files:
+  - assets/css/styles.min.css
+
 exclude:
+  - assets/css/styles.min.css
   - .idea/
   - node_modules/
   - project/
