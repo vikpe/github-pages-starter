@@ -1,8 +1,6 @@
 'use strict';
 
 const gulp = require('gulp');
-const paths = require('./gulpfile.paths');
-
 const autoprefixer = require('autoprefixer');
 const changed = require('gulp-changed');
 const clean = require('gulp-clean');
@@ -15,10 +13,30 @@ const rev = require('gulp-rev');
 const sass = require('gulp-sass');
 const tildeImporter = require('node-sass-tilde-importer');
 
+const paths = require('./gulpfile.paths');
 let gulpSrcOptions = { read: false };
 let gulpCleanOptions = { force: true };
 
-gulp.task('build:styles', function() {
+// styles
+gulp.task('clean:styles:prod', function() {
+  return gulp
+    .src(paths.dist.cssFilesGlob, gulpSrcOptions)
+    .pipe(clean(gulpCleanOptions));
+});
+
+gulp.task('build:styles:dev', function() {
+  return gulp
+    .src(paths.src.stylesDir + '*.scss')
+    .pipe(sass({
+      importer: tildeImporter,
+      outputStyle: 'compressed'
+    }))
+    .pipe(concat('styles.min.css'))
+    .pipe(gulp.dest(paths.site.stylesDir))
+    .on('error', fancyLog.error);
+});
+
+gulp.task('build:styles:prod', function() {
   let cssPostProcessors = [
     flexbugsFixes,
     autoprefixer({ browsers: ['last 5 versions', '> 5%'] })
@@ -40,27 +58,38 @@ gulp.task('build:styles', function() {
 });
 
 // images
-gulp.task('build:images', function() {
-  const DEST = paths.dist.imagesDir;
-
+gulp.task('clean:images:prod', function() {
   return gulp
-    .src(paths.src.imageFilesGlob)
-    .pipe(changed(DEST, { hasChanged: changed.compareContents }))
-    .pipe(imagemin())
-    .pipe(gulp.dest(DEST));
-});
-
-gulp.task('clean:images', function() {
-  return gulp
-    .src(paths.dist.imageFilesGlob, gulpSrcOptions)
+    .src(paths.dist.cssFilesGlob, gulpSrcOptions)
     .pipe(clean(gulpCleanOptions));
 });
 
-gulp.task('watch', ['build'], function() {
-  gulp.watch(paths.src.sassFilesGlob, ['build:styles']);
-  gulp.watch(paths.src.imageFilesGlob, ['build:images']);
+gulp.task('build:images:dev', function() {
+  const dest_dir = paths.site.imagesDir;
+
+  return gulp
+    .src(paths.src.imageFilesGlob)
+    .pipe(changed(dest_dir, { hasChanged: changed.compareContents }))
+    .pipe(gulp.dest(dest_dir));
 });
 
-gulp.task('dev', ['watch']);
-gulp.task('build', ['build:styles', 'clean:images', 'build:images']);
-gulp.task('default', ['dev']);
+gulp.task('build:images:prod', function() {
+  const dest_dir = paths.dist.imagesDir;
+
+  return gulp
+    .src(paths.src.imageFilesGlob)
+    .pipe(imagemin())
+    .pipe(gulp.dest(dest_dir));
+});
+
+gulp.task('watch', ['build:images:dev', 'build:styles:dev'], function() {
+  gulp.watch(paths.src.imageFilesGlob, ['build:images:dev']);
+  gulp.watch(paths.src.sassFilesGlob, ['build:styles:dev']);
+});
+
+// composite and default task
+gulp.task('build', [
+  'clean:images:prod', 'build:images:prod',
+  'clean:styles:prod', 'build:styles:prod'
+]);
+gulp.task('default', ['watch']);
