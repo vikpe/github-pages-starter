@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{site.custom_settings.language_code}}" dir="ltr">
     <head>
-        {% if site.custom_settings.is_published == false or page.url == '/404.html' %}
+        {% if page.url == '/404.html' %}
         <meta name="robots" content="noindex, nofollow">
         {% endif %}
         <meta charset="utf-8">
@@ -38,8 +38,6 @@
             {% include footer.md %}
 
         </div>
-
-        {% include google_analytics.md %}
 
     </body>
 </html>

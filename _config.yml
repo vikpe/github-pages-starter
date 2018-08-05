@@ -5,12 +5,10 @@ url: https://vikpe.org/github-pages-starter
 custom_settings:
   # required
   is_development: false
-  is_published: false
 
   # optional/convenience
   name: GitHub Pages starter
   description: Fast rendering, live reload, GitHub Pages ready.
-  google_analytics_tracking_code: false
 
 # Handling Reading
 safe: true

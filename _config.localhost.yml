@@ -5,5 +5,4 @@ url: http://localhost:3000
 custom_settings:
   # required settings
   is_development: true
-  is_published: false
 
