@@ -17,6 +17,11 @@ const paths = require('./gulpfile.paths');
 let gulpSrcOptions = { read: false };
 let gulpCleanOptions = { force: true };
 
+function catchError(e) {
+  fancyLog.error(e);
+  this.emit('end');
+}
+
 // styles
 gulp.task('clean:styles:prod', function() {
   return gulp
@@ -27,14 +32,16 @@ gulp.task('clean:styles:prod', function() {
 gulp.task('build:styles:dev', function() {
   return gulp
     .src(paths.src.stylesDir + '*.scss')
-    .pipe(sass().on('error', fancyLog.error))
-    .pipe(sass({
-      importer: tildeImporter,
-      outputStyle: 'compressed'
-    }))
+    .pipe(
+      sass({
+        importer: tildeImporter,
+        outputStyle: 'compressed'
+      })
+        .on('error', catchError)
+    )
     .pipe(concat('styles.min.css'))
     .pipe(gulp.dest(paths.site.stylesDir))
-    .on('error', fancyLog.error);
+    .on('error', catchError);
 });
 
 gulp.task('build:styles:prod', function() {
@@ -45,11 +52,13 @@ gulp.task('build:styles:prod', function() {
 
   return gulp
     .src(paths.src.stylesDir + '*.scss')
-    .pipe(sass().on('error', fancyLog.error))
-    .pipe(sass({
-      importer: tildeImporter,
-      outputStyle: 'compressed'
-    }))
+    .pipe(
+      sass({
+        importer: tildeImporter,
+        outputStyle: 'compressed'
+      })
+        .on('error', catchError)
+    )
     .pipe(postcss(cssPostProcessors))
     .pipe(concat('styles.min.css'))
     .pipe(rev())
