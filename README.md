@@ -10,7 +10,8 @@
 ## Install
 1. Clone/download repo
 2. `yarn install`
-3. Edit `_config.yml`, change values for `url` and `custom_settings`.
+3. `bundle install`
+4. Edit `_config.yml`, change values for `url` and `custom_settings`.
 
 ## Usage
 **Development** (local)
