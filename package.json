@@ -24,7 +24,8 @@
     "gulp-sass": "^4.0.2",
     "node-sass": "^4.11.0",
     "node-sass-tilde-importer": "^1.0.2",
-    "postcss-flexbugs-fixes": "^4.1.0"
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "prettier": "^1.15.3"
   },
   "dependencies": {},
   "postcss": {}
