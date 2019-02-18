@@ -32,3 +32,4 @@ Your site is now available at **`http://localhost:3000`**
 
 ## See also
 * [Gatsby](https://github.com/gatsbyjs/gatsby) - Build blazing fast, modern apps and websites with React
+* [Next.js](https://github.com/zeit/next.js)
