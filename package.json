@@ -28,5 +28,6 @@
     "prettier": "^1.18.2"
   },
   "dependencies": {},
-  "postcss": {}
+  "postcss": {},
+  "browsers": ["last 5 versions", "> 5%"]
 }

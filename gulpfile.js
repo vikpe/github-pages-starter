@@ -46,7 +46,7 @@ gulp.task("build:styles:dev", function() {
 gulp.task("build:styles:prod", function() {
   let cssPostProcessors = [
     flexbugsFixes,
-    autoprefixer({ browsers: ["last 5 versions", "> 5%"] })
+    autoprefixer()
   ];
 
   return gulp
