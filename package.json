@@ -10,7 +10,7 @@
     "jekyll-dev": "bundle exec jekyll build --watch --config=_config.yml,_config.localhost.yml"
   },
   "devDependencies": {
-    "autoprefixer": "^9.6.0",
+    "autoprefixer": "^9.6.1",
     "browser-sync": "^2.26.7",
     "bs-html-injector": "^3.0.3",
     "fancy-log": "^1.3.3",
