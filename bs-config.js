@@ -68,7 +68,7 @@ module.exports = {
     {
       module: "bs-html-injector",
       options: {
-        files: "public/**/*.html"
+        files: "_site/**/*.html"
       }
     }
   ],
