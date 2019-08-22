@@ -16,8 +16,8 @@ include:
   - _pages
 
 keep_files:
-  - assets/css/styles.min.css
-  - _data/rev-manifest.json
+  - assets # generate by gulp
+  - _data/rev-manifest.json # generate by gulp
 
 exclude:
   - _data/rev-manifest.json
