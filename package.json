@@ -7,9 +7,9 @@
   "repository": "vikpe/github-pages-starter",
   "scripts": {
     "browser-sync": "browser-sync start --config bs-config.js",
-    "jekyll-dev": "rimraf _site/* && bundle exec jekyll build --watch --config=_config.yml,_config.localhost.yml",
+    "jekyll-dev": "cd jekyll && bundle exec jekyll build --watch --config=_config.yml,_config.localhost.yml",
     "watch-assets": "gulp dev",
-    "build-assets": "rimraf assets/* && gulp build"
+    "build-assets": "rimraf jekyll/assets/*.css && rimraf jekyll/assets/img/* && gulp build"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
