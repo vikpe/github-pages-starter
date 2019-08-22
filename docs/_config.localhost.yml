@@ -4,3 +4,12 @@ url: http://localhost:3000
 # Custom settings (GitHub Pages starter)
 custom_settings:
   is_development: true
+
+# Handling / Reading
+source: .
+
+# Output
+permalink: pretty
+timezone: Europe/Stockholm
+destination: ../public
+
