@@ -1,5 +1,4 @@
 .idea/
-_site/
+public/
 node_modules/
-.jekyll-metadata
 yarn-error.log
