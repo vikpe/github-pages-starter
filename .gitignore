@@ -1,4 +1,4 @@
 .idea/
-_site/
+public/
 node_modules/
 yarn-error.log
