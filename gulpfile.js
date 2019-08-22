@@ -29,7 +29,7 @@ gulp.task("build:styles:dev", function() {
       }).on("error", catchError)
     ).
     pipe(concat("styles.css")).
-    pipe(gulp.dest(paths.site.stylesDir)).
+    pipe(gulp.dest(paths.public.stylesDir)).
     on("error", catchError);
 });
 
@@ -49,7 +49,7 @@ gulp.task("build:styles:prod", function() {
     pipe(postcss(cssPostProcessors)).
     pipe(concat("styles.min.css")).
     pipe(rev()).
-    pipe(gulp.dest(paths.site.stylesDir)).
+    pipe(gulp.dest(paths.jekyll.stylesDir)).
     pipe(rev.manifest()).
     pipe(gulp.dest(paths.jekyll.dataDir)).
     on("error", fancyLog.error);
@@ -62,18 +62,22 @@ const buildImages = destDir => {
     pipe(gulp.dest(destDir));
 };
 
-gulp.task("build:images", function() {
-  return buildImages(paths.site.imagesDir);
+gulp.task("build:images:dev", function() {
+  return buildImages(paths.public.imagesDir);
+});
+
+gulp.task("build:images:prod", function() {
+  return buildImages(paths.jekyll.imagesDir);
 });
 
 gulp.task("watch:assets", function() {
-  gulp.watch(paths.src.imageFilesGlob, gulp.series("build:images"));
+  gulp.watch(paths.src.imageFilesGlob, gulp.series("build:images:dev"));
   gulp.watch(paths.src.sassFilesGlob, gulp.series("build:styles:dev"));
 });
 
 // composite and default task
 gulp.task("build",
-  gulp.series("build:images", "build:styles:prod"));
+  gulp.series("build:images:prod", "build:styles:prod"));
 gulp.task("dev",
-  gulp.series("build:images", "build:styles:dev", "watch:assets"));
+  gulp.series("build:images:dev", "build:styles:dev", "watch:assets"));
 gulp.task("default", gulp.series("dev"));

@@ -18,18 +18,20 @@ src.sassFilesGlob = [
 src.imageFilesGlob = src.imagesDir + fileGlobs.images;
 
 const jekyll = {};
-jekyll.baseDir = "/";
+jekyll.baseDir = "jekyll/";
 jekyll.dataDir = jekyll.baseDir + "_data/";
+jekyll.stylesDir = jekyll.baseDir + "assets/css/";
+jekyll.imagesDir = jekyll.baseDir + "assets/img/";
 
-const site = {};
-site.baseDir = "_site/";
-site.stylesDir = site.baseDir + "assets/css/";
-site.imagesDir = site.baseDir + "assets/img/";
+const pub = {};
+pub.baseDir = "public/";
+pub.stylesDir = pub.baseDir + "assets/css/";
+pub.imagesDir = pub.baseDir + "assets/img/";
 
 // All
 const paths = {
   src,
-  site,
+  public: pub,
   jekyll
 };
 
