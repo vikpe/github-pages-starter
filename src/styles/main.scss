@@ -1,7 +1,8 @@
 $app-layout-border: 2px solid rebeccapurple;
+$app-bg-color: #f5f7f9;
 
 body {
-  background-color: #f5f7f9;
+  background-color: $app-bg-color;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
 }
@@ -20,7 +21,7 @@ h2 {
 }
 
 .app-center-wrapper {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
