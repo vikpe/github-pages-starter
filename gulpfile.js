@@ -29,7 +29,7 @@ gulp.task("build:styles:dev", function() {
       }).on("error", catchError)
     ).
     pipe(concat("styles.css")).
-    pipe(gulp.dest(paths.site.stylesDir)).
+    pipe(gulp.dest(paths.public.stylesDir)).
     on("error", catchError);
 });
 
@@ -49,9 +49,9 @@ gulp.task("build:styles:prod", function() {
     pipe(postcss(cssPostProcessors)).
     pipe(concat("styles.min.css")).
     pipe(rev()).
-    pipe(gulp.dest(paths.jekyll.stylesDir)).
+    pipe(gulp.dest(paths.docs.stylesDir)).
     pipe(rev.manifest()).
-    pipe(gulp.dest(paths.jekyll.dataDir)).
+    pipe(gulp.dest(paths.docs.dataDir)).
     on("error", fancyLog.error);
 });
 
@@ -63,11 +63,11 @@ const buildImages = destDir => {
 };
 
 gulp.task("build:images:dev", function() {
-  return buildImages(paths.site.imagesDir);
+  return buildImages(paths.public.imagesDir);
 });
 
 gulp.task("build:images:prod", function() {
-  return buildImages(paths.jekyll.imagesDir);
+  return buildImages(paths.docs.imagesDir);
 });
 
 gulp.task("watch:assets", function() {
