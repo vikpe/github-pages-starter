@@ -9,7 +9,5 @@ custom_settings:
 source: .
 
 # Output
-permalink: pretty
-timezone: Europe/Stockholm
 destination: ../public
 
