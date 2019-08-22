@@ -16,8 +16,8 @@ module.exports = {
     "port": 3001
   },
   "files": [
-    "_site/assets/css/styles.css",
-    "_site/assets/img/**/*"
+    "public/assets/css/styles.css",
+    "public/assets/img/**/*"
   ],
   "watchEvents": [
     "change"
@@ -28,7 +28,7 @@ module.exports = {
   "watchOptions": {
     "ignoreInitial": true
   },
-  "server": "_site",
+  "server": "public",
   "proxy": false,
   "port": 3000,
   "middleware": false,
@@ -68,7 +68,7 @@ module.exports = {
     {
       module: "bs-html-injector",
       options: {
-        files: "_site/**/*.html"
+        files: "public/**/*.html"
       }
     }
   ],
