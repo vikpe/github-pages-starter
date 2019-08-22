@@ -6,4 +6,5 @@ custom_menu_order: 1
 custom_description: About this starter
 ---
 
-This is a sample about page!
+* This is a sample about page!
+* Changing `about.md` will trigger HTML-injection with instant update. 

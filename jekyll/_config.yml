@@ -10,14 +10,14 @@ custom_settings:
   name: GitHub Pages starter
   description: Fast builds, live reload, GitHub Pages ready.
 
-# Handling Reading
+# Handling / Reading
+source: .
 safe: true
 include:
   - _pages
 
 keep_files:
   - assets # generate by gulp
-  - _data/rev-manifest.json # generate by gulp
 
 exclude:
   - _data/rev-manifest.json
@@ -44,6 +44,7 @@ markdown: kramdown
 # Output
 permalink: pretty
 timezone: Europe/Stockholm
+destination: ../public
 
 # Markdown Processors
 kramdown:

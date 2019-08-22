@@ -1,0 +1,9 @@
+# Site Variables
+url: http://localhost:3000
+
+# Custom settings (GitHub Pages starter)
+custom_settings:
+  is_development: true
+
+# Output
+destination: ../public
