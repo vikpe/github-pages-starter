@@ -18,15 +18,15 @@
 
 Open 3 terminals and run the following commands (run in parallel).
 
-1. `yarn run jekyll-dev` - Generates site on changes to `/public`.
-2. `yarn run watch-assets` - Compiles SASS and images on changes to `/public/assets`.
-3. `yarn run browser-sync` - Starts web server hosting content from `/public` at `http://localhost:3000` and injects changes.
+1. `yarn run jekyll-dev` - Generates site on changes to `/_site`.
+2. `yarn run watch-assets` - Compiles SASS and images on changes to `/_site/assets`.
+3. `yarn run browser-sync` - Starts web server hosting content from `/_site` at `http://localhost:3000` and injects changes.
 
 Your site is now available at **`http://localhost:3000`**
 
 **Production**
 
-1. `yarn run build-assets` - Cleans, builds and minifies assets to `/assets`.
+1. `yarn run build-assets` - Cleans, builds and minifies assets to `/jekyll/assets`.
 2. Push changes to GitHub
 
 

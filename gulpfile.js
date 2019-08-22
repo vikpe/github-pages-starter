@@ -29,7 +29,7 @@ gulp.task("build:styles:dev", function() {
       }).on("error", catchError)
     ).
     pipe(concat("styles.css")).
-    pipe(gulp.dest(paths.public.stylesDir)).
+    pipe(gulp.dest(paths.site.stylesDir)).
     on("error", catchError);
 });
 
@@ -63,7 +63,7 @@ const buildImages = destDir => {
 };
 
 gulp.task("build:images:dev", function() {
-  return buildImages(paths.public.imagesDir);
+  return buildImages(paths.site.imagesDir);
 });
 
 gulp.task("build:images:prod", function() {

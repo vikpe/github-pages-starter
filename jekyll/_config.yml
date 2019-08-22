@@ -32,7 +32,7 @@ markdown: kramdown
 # Output
 permalink: pretty
 timezone: Europe/Stockholm
-destination: ../public
+destination: ../_site
 
 # Markdown Processors
 kramdown:
