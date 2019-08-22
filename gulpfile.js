@@ -24,23 +24,21 @@ function catchError(e) {
 
 // styles
 gulp.task("clean:styles:prod", function() {
-  return gulp
-    .src(paths.dist.cssFilesGlob, gulpSrcOptions)
-    .pipe(clean(gulpCleanOptions));
+  return gulp.src(paths.dist.cssFilesGlob, gulpSrcOptions).
+    pipe(clean(gulpCleanOptions));
 });
 
 gulp.task("build:styles:dev", function() {
-  return gulp
-    .src(paths.src.stylesDir + "*.scss")
-    .pipe(
+  return gulp.src(paths.src.stylesDir + "*.scss").
+    pipe(
       sass({
         importer: tildeImporter,
         outputStyle: "compressed"
       }).on("error", catchError)
-    )
-    .pipe(concat("styles.min.css"))
-    .pipe(gulp.dest(paths.site.stylesDir))
-    .on("error", catchError);
+    ).
+    pipe(concat("styles.min.css")).
+    pipe(gulp.dest(paths.site.stylesDir)).
+    on("error", catchError);
 });
 
 gulp.task("build:styles:prod", function() {
@@ -49,21 +47,20 @@ gulp.task("build:styles:prod", function() {
     autoprefixer()
   ];
 
-  return gulp
-    .src(paths.src.stylesDir + "*.scss")
-    .pipe(
+  return gulp.src(paths.src.stylesDir + "*.scss").
+    pipe(
       sass({
         importer: tildeImporter,
         outputStyle: "compressed"
       }).on("error", catchError)
-    )
-    .pipe(postcss(cssPostProcessors))
-    .pipe(concat("styles.min.css"))
-    .pipe(rev())
-    .pipe(gulp.dest(paths.dist.stylesDir))
-    .pipe(rev.manifest())
-    .pipe(gulp.dest(paths.dist.dataDir))
-    .on("error", fancyLog.error);
+    ).
+    pipe(postcss(cssPostProcessors)).
+    pipe(concat("styles.min.css")).
+    pipe(rev()).
+    pipe(gulp.dest(paths.dist.stylesDir)).
+    pipe(rev.manifest()).
+    pipe(gulp.dest(paths.dist.dataDir)).
+    on("error", fancyLog.error);
 });
 
 gulp.task(
@@ -73,19 +70,17 @@ gulp.task(
 
 // images
 gulp.task("clean:images", function() {
-  return gulp
-    .src(paths.dist.imageFilesGlob, gulpSrcOptions)
-    .pipe(clean(gulpCleanOptions));
+  return gulp.src(paths.dist.imageFilesGlob, gulpSrcOptions).
+    pipe(clean(gulpCleanOptions));
 });
 
 gulp.task("build:images", function() {
   const dest_dir = paths.dist.imagesDir;
 
-  return gulp
-    .src(paths.src.imageFilesGlob)
-    .pipe(imagemin())
-    .pipe(changed(dest_dir, { hasChanged: changed.compareContents }))
-    .pipe(gulp.dest(dest_dir));
+  return gulp.src(paths.src.imageFilesGlob).
+    pipe(imagemin()).
+    pipe(changed(dest_dir, { hasChanged: changed.compareContents })).
+    pipe(gulp.dest(dest_dir));
 });
 
 gulp.task("rebuild:images", gulp.series("clean:images", "build:images"));
