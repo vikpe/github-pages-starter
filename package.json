@@ -9,7 +9,7 @@
     "browser-sync": "browser-sync start --config bs-config.js",
     "jekyll-dev": "cd docs && bundle exec jekyll build --watch --config=_config.yml,_config.localhost.yml",
     "watch-assets": "gulp dev",
-    "build-assets": "rimraf docs/assets/*.css && rimraf docs/assets/img/* && gulp build"
+    "build-assets": "rimraf docs/assets/css/*.css && rimraf docs/assets/img/* && gulp build"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
