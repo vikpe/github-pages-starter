@@ -7,7 +7,9 @@
   "repository": "vikpe/github-pages-starter",
   "scripts": {
     "browser-sync": "browser-sync start --config bs-config.js",
-    "jekyll-dev": "bundle exec jekyll build --watch --config=_config.yml,_config.localhost.yml"
+    "jekyll-dev": "bundle exec jekyll build --watch --config=_config.yml,_config.localhost.yml",
+    "watch-assets": "gulp dev",
+    "build-assets": "gulp build"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
