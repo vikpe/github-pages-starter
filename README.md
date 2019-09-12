@@ -10,7 +10,7 @@
 ## Install
 1. Clone/download repo
 2. `yarn install`
-3. `bundle install`
+3. `cd docs && bundle install`
 4. Edit `_config.yml`, change values for `url` and `custom_settings`.
 5. Set your GitHub Pages source to `master branch /docs folder` in your repository settings.
 
