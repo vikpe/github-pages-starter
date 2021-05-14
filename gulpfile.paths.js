@@ -3,36 +3,31 @@
  */
 
 const fileGlobs = {
-  images: "**/*.+(jpg|JPG|jpeg|JPEG|png|PNG|svg|SVG|gif|GIF|webp|WEBP|tif|TIF)",
+  data: "**/*.+(json|yml|csv)",
+  images: "**/*.+(jpg|jpeg|png|svg|gif|webp|tif)",
   sass: "**/*.scss",
-  css: "**/*.css"
 };
 
-const src = {};
-src.baseDir = "src/";
-src.imagesDir = src.baseDir + "img/";
-src.stylesDir = src.baseDir + "styles/";
-src.sassFilesGlob = [
-  src.stylesDir + fileGlobs.sass
-];
-src.imageFilesGlob = src.imagesDir + fileGlobs.images;
+const jekyllDir = "docs/";
+const sourceDir = "src/";
+const publicDir = "public/";
 
-const docs = {};
-docs.baseDir = "docs/";
-docs.dataDir = docs.baseDir + "_data/";
-docs.stylesDir = docs.baseDir + "assets/css/";
-docs.imagesDir = docs.baseDir + "assets/img/";
-
-const pub = {};
-pub.baseDir = "public/";
-pub.stylesDir = pub.baseDir + "assets/css/";
-pub.imagesDir = pub.baseDir + "assets/img/";
-
-// All
 const paths = {
-  src,
-  public: pub,
-  docs
+  jekyll: {
+    baseDir: jekyllDir,
+    dataDir: jekyllDir + "_data/",
+    dataFilesGlob: jekyllDir + fileGlobs.data,
+  },
+  src: {
+    baseDir: sourceDir,
+    sassMainFile: sourceDir + "app/styles/main.scss",
+    sassFilesGlob: sourceDir + fileGlobs.sass,
+    imageFilesGlob: sourceDir + fileGlobs.images,
+  },
+  public: {
+    baseDir: publicDir,
+    assetsDir: publicDir + "assets/",
+  },
 };
 
 module.exports = paths;
