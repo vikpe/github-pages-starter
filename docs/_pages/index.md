@@ -5,8 +5,8 @@ permalink: /
 ---
 
 
-<h1>{{site.custom_settings.name}}</h1>
-<p>{{site.custom_settings.description}}</p>
+<h1>{{site.name}}</h1>
+<p>{{site.custom.description}}</p>
 
 <hr>
 
