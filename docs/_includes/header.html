@@ -2,8 +2,8 @@
     <nav>
 
         <a href="{{ '/' | prepend: site.url}}" class="{% if page.url== '/' %}app-text-strong{% endif %}">
-            <img src="{{'/assets/img/jekyll.svg' | prepend: site.url}}" alt="" width="24" height="24" />
-            {{site.custom_settings.name}}
+            <img src="{{'/assets/app/img/jekyll.svg' | prepend: site.url}}" alt="" width="24" height="24" />
+            {{site.name}}
         </a>
 
         {% assign pages = site.pages | where_exp:"p",
