@@ -15,6 +15,7 @@ const publicDir = "public/";
 const paths = {
   jekyll: {
     baseDir: jekyllDir,
+    assetsDir: jekyllDir + "assets/",
     dataDir: jekyllDir + "_data/",
     dataFilesGlob: jekyllDir + fileGlobs.data,
   },
