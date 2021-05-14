@@ -3,7 +3,7 @@ url: https://vikpe.org/github-pages-starter
 name: GitHub Pages starter
 
 # Custom settings (GitHub Pages Starter)
-custom_settings:
+custom:
   # required
   is_development: false
 
