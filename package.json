@@ -5,6 +5,10 @@
   "author": "Viktor Persson",
   "license": "MIT",
   "repository": "vikpe/github-pages-starter",
+  "type": "module",
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
   "scripts": {
     "dev": "run-s clean dev:*",
     "dev:jekyll": "yarn build:jekyll --config=_config.yml,_config.dev.yml",
@@ -14,7 +18,7 @@
     "build:jekyll": "cd docs && bundle exec jekyll build",
     "build:assets": "gulp assets:prod",
     "clean": "cd docs && bundle exec jekyll clean",
-    "start": "browser-sync start --config bs-config.js",
+    "start": "browser-sync start --config bs-config.cjs",
     "gulp": "gulp"
   },
   "devDependencies": {

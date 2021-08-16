@@ -1,21 +1,24 @@
-"use strict";
-
-const changed = require("gulp-changed");
-const concat = require("gulp-concat");
-const { dest, parallel, series, src, task, watch } = require("gulp");
-const imagemin = require("gulp-imagemin");
-const rev = require("gulp-rev");
-const sass = require("gulp-sass")(require("sass"));
-const childProcess = require("child_process");
+import changed from "gulp-changed";
+import childProcess from "child_process";
+import concat from "gulp-concat";
+import gulpPkg from "gulp";
+import gulpSass from "gulp-sass";
+import imagemin from "gulp-imagemin";
+import rev from "gulp-rev";
+import sassCompiler from "sass";
 
 // paths
-const paths = require("./gulpfile.paths");
+import paths from "./gulpfile.paths.js";
+
+// commonJS/instances
+const sass = gulpSass(sassCompiler);
+const { dest, parallel, series, src, task, watch } = gulpPkg;
 
 // errors
-function handleError(e) {
+const handleError = (e) => {
   console.error(e.toString());
   this.emit("end");
-}
+};
 
 // styles
 task("styles:dev", () => {
@@ -34,7 +37,7 @@ task("styles:prod", () => {
     .pipe(sass({ outputStyle: "compressed" }).on("error", handleError))
     .pipe(concat("styles.min.css"))
     .pipe(rev())
-    .pipe(dest(paths.jekyll.assetsDir))
+    .pipe(dest(paths.public.assetsDir))
     .pipe(rev.manifest())
     .pipe(dest(paths.jekyll.dataDir))
     .on("error", handleError);
@@ -44,7 +47,7 @@ task("styles:prod", () => {
 task("images:prod", () => {
   return src(paths.src.imageFilesGlob)
     .pipe(imagemin())
-    .pipe(dest(paths.jekyll.assetsDir))
+    .pipe(dest(paths.public.assetsDir))
     .on("error", handleError);
 });
 
