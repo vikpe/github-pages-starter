@@ -12,7 +12,7 @@ const jekyllDir = "docs/";
 const sourceDir = "src/";
 const publicDir = "public/";
 
-const paths = {
+export default {
   jekyll: {
     baseDir: jekyllDir,
     assetsDir: jekyllDir + "assets/",
@@ -30,5 +30,3 @@ const paths = {
     assetsDir: publicDir + "assets/",
   },
 };
-
-module.exports = paths;
