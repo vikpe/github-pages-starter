@@ -37,7 +37,7 @@ task("styles:prod", () => {
     .pipe(sass({ outputStyle: "compressed" }).on("error", handleError))
     .pipe(concat("styles.min.css"))
     .pipe(rev())
-    .pipe(dest(paths.public.assetsDir))
+    .pipe(dest(paths.jekyll.assetsDir))
     .pipe(rev.manifest())
     .pipe(dest(paths.jekyll.dataDir))
     .on("error", handleError);
@@ -47,7 +47,7 @@ task("styles:prod", () => {
 task("images:prod", () => {
   return src(paths.src.imageFilesGlob)
     .pipe(imagemin())
-    .pipe(dest(paths.public.assetsDir))
+    .pipe(dest(paths.jekyll.assetsDir))
     .on("error", handleError);
 });
 

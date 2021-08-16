@@ -8,13 +8,14 @@ const fileGlobs = {
   sass: "**/*.scss",
 };
 
-const jekyllDir = "jekyll/";
+const jekyllDir = "docs/";
 const sourceDir = "src/";
 const publicDir = "public/";
 
 export default {
   jekyll: {
     baseDir: jekyllDir,
+    assetsDir: jekyllDir + "assets/",
     dataDir: jekyllDir + "_data/",
     dataFilesGlob: jekyllDir + fileGlobs.data,
   },
