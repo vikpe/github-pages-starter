@@ -1,24 +1,21 @@
-import changed from "gulp-changed";
-import childProcess from "child_process";
-import concat from "gulp-concat";
-import gulpPkg from "gulp";
-import gulpSass from "gulp-sass";
-import imagemin from "gulp-imagemin";
-import rev from "gulp-rev";
-import sassCompiler from "sass";
+"use strict";
+
+const changed = require("gulp-changed");
+const concat = require("gulp-concat");
+const { dest, parallel, series, src, task, watch } = require("gulp");
+const imagemin = require("gulp-imagemin");
+const rev = require("gulp-rev");
+const sass = require("gulp-sass")(require("sass"));
+const childProcess = require("child_process");
 
 // paths
-import paths from "./gulpfile.paths.js";
-
-// commonJS/instances
-const sass = gulpSass(sassCompiler);
-const { dest, parallel, series, src, task, watch } = gulpPkg;
+const paths = require("./gulpfile.paths");
 
 // errors
-const handleError = (e) => {
+function handleError(e) {
   console.error(e.toString());
   this.emit("end");
-};
+}
 
 // styles
 task("styles:dev", () => {
