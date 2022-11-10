@@ -1,3 +1,13 @@
+## DEPRECATED
+This project is no longer maintined, please consider using any of the following projects instead:
+* [Astro](https://astro.build)
+* [Hugo](https://gohugo.io)
+* [Vite](https://vitejs.dev)
+* [VitePress](https://vitepress.vuejs.org)
+* [Gatsby](https://www.gatsbyjs.com)
+
+---
+
 # GitHub Pages starter
 > Fast builds, live reload, GitHub Pages ready
 
@@ -52,5 +62,8 @@ Command | Stage | Description
 
 
 ## See also
-* [Gatsby](https://github.com/gatsbyjs/gatsby) - Build blazing fast, modern apps and websites with React
-* [Next.js](https://github.com/zeit/next.js) - React based framework with server side rendering (SSR)
+* [Astro](https://astro.build)
+* [Hugo](https://gohugo.io)
+* [Vite](https://vitejs.dev)
+* [VitePress](https://vitepress.vuejs.org)
+* [Gatsby](https://www.gatsbyjs.com)
