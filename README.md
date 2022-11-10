@@ -1,5 +1,5 @@
 ## DEPRECATED
-This project is no longer maintined, please consider using any of the following projects instead:
+This project is no longer maintained, please consider using any of the following projects instead:
 * [Astro](https://astro.build)
 * [Hugo](https://gohugo.io)
 * [Vite](https://vitejs.dev)
